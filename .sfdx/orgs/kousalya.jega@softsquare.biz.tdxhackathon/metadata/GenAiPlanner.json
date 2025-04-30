@@ -1,0 +1,44 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005NS00000KmcV0YAJ",
+      "createdByName": "Manikandan P",
+      "createdDate": "2025-04-29T11:27:45.000Z",
+      "fileName": "genAiPlanners/FAQ_Agnet.genAiPlanner",
+      "fullName": "FAQ_Agnet",
+      "id": "16jNS000000kHaXYAU",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T07:31:49.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlanner"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-29T09:32:39.000Z",
+      "fileName": "genAiPlanners/EmployeeCopilotPlanner.genAiPlanner",
+      "fullName": "EmployeeCopilotPlanner",
+      "id": "16jNS000000kCxRYAU",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-29T09:32:39.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlanner"
+    },
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-29T11:57:01.000Z",
+      "fileName": "genAiPlanners/Document_Verification_Agent.genAiPlanner",
+      "fullName": "Document_Verification_Agent",
+      "id": "16jNS000000kIZpYAM",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T07:44:11.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlanner"
+    }
+  ]
+}

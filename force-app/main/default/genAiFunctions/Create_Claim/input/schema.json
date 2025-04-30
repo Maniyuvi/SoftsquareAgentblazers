@@ -1,0 +1,28 @@
+{
+  "required" : [ "AccountEmail", "ClaimNotes", "insuranceId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "AccountEmail" : {
+      "title" : "AccountEmail",
+      "description" : "policy holder email",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "ClaimNotes" : {
+      "title" : "ClaimNotes",
+      "description" : "Summary of the Claim reason given by user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "insuranceId" : {
+      "title" : "insuranceId",
+      "description" : "Id of the Insurance Policy record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

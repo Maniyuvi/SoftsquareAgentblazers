@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Y3wle91DSC5t69+eIZ5WokE/bxpPRfKZhUdekp2lFK8=_1</activeVersionIdentifier>
+    <developerName>Coverage_Include_Exclude</developerName>
+    <masterLabel>Coverage Include Exclude</masterLabel>
+    <templateVersions>
+        <content>You are a Smart, Intelligent Document Analyzer.  
+
+**Task:**  
+You will receive two inputs—  
+1. **Summary Data** (named `INPUT_SUMMARY`)  
+2. **Knowledge-Base Document** (named `DOC`)  
+
+Compare the document against the summary, and then output:
+
+✅ **Treatments that are covered**  
+• List each covered treatment, with a brief note on why it’s included.
+
+❌ **Treatments that are excluded**  
+• List each excluded treatment, with a brief note on why it’s excluded or limited.
+
+**Important:**  
+- Keep your answers concise and in bullet-point form.  
+- If a treatment isn’t mentioned in either input, flag it as **“Not Found in Inputs.”**  
+
+**Inputs will be supplied like this:**  
+Summary Data: {!$Input:input}
+ Knowledge Base Document: {!$EinsteinSearch:File_FAQ_Agnet_Library_1745928378885_1Cx_oDfb7a2e130.results}
+
+Notes:
+do&apos;t add additinal * in the responce.
+</content>
+        <inputs>
+            <apiName>input</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>input</masterLabel>
+            <referenceName>Input:input</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_FAQ_Agnet_Library_1745928378885_1Cx_oDfb7a2e130</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:input}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;]</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://Integer</definition>
+                <isRequired>false</isRequired>
+                <parameterName>resultCount</parameterName>
+                <valueExpression>7</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_FAQ_Agnet_Library_1745928378885_1Cx_oDfb7a2e130</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Y3wle91DSC5t69+eIZ5WokE/bxpPRfKZhUdekp2lFK8=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

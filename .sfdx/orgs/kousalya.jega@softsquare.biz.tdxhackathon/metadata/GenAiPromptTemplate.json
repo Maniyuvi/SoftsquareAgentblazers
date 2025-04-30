@@ -1,0 +1,44 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-29T18:30:13.000Z",
+      "fileName": "genAiPromptTemplates/Retrieve_Image_Content.genAiPromptTemplate",
+      "fullName": "Retrieve_Image_Content",
+      "id": "0hfNS000008KZkzYAG",
+      "lastModifiedById": "005NS00000KmkhlYAB",
+      "lastModifiedByName": "Kousalya J",
+      "lastModifiedDate": "2025-04-29T18:31:28.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPromptTemplate"
+    },
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-30T11:47:54.000Z",
+      "fileName": "genAiPromptTemplates/Coverage_Include_Exclude.genAiPromptTemplate",
+      "fullName": "Coverage_Include_Exclude",
+      "id": "0hfNS000008NKMPYA4",
+      "lastModifiedById": "005NS00000KmcV0YAJ",
+      "lastModifiedByName": "Manikandan P",
+      "lastModifiedDate": "2025-04-30T12:02:29.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPromptTemplate"
+    },
+    {
+      "createdById": "005NS00000KmcV0YAJ",
+      "createdByName": "Manikandan P",
+      "createdDate": "2025-04-29T10:46:17.000Z",
+      "fileName": "genAiPromptTemplates/DocVerification.genAiPromptTemplate",
+      "fullName": "DocVerification",
+      "id": "0hfNS000008JJNJYA4",
+      "lastModifiedById": "005NS00000KmcV0YAJ",
+      "lastModifiedByName": "Manikandan P",
+      "lastModifiedDate": "2025-04-29T10:46:17.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPromptTemplate"
+    }
+  ]
+}

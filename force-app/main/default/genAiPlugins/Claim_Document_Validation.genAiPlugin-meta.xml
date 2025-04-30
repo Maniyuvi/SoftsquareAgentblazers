@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>When the user uploads treatment-related documents for an insurance claim—such as discharge summaries, bills, reports, or prescriptions—the agent should verify whether all necessary documents are submitted for the mentioned health issue. This topic is triggered when the user&apos;s intent is to submit claim documents, check if any documents are missing, or validate their claim submission package.</description>
+    <developerName>Claim_Document_Validation</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Step 1: Determine Treatment Context
+Extract the treatment context by analyzing the summary of the uploaded documents.
+
+Step 2: Call the Knowledge Action
+Use the action “Answer question with knowledge” to retrieve the list of required documents for the detected treatment (e.g., &quot;bone fracture due to accident&quot;).
+
+The knowledge file uploaded contains a checklist table of documents (including mandatory and optional types).
+
+Step 3: Cross-Check Against Uploads
+Match the document summary to the checklist. 
+Use fuzzy or keyword-based matching if needed to account for variation in file naming.
+
+Step 4: Respond to the User
+If any mandatory document is missing, inform the user clearly and list the missing items.
+
+If user confirms to proceed to check claim coverage, confirm receipt and tell the user that their submission is complete and ready for claim processing.</description>
+        <developerName>instruction_stepdeterm0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_stepdeterm0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Claim Document Validation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic enables the agent to:
+
+Identify the treatment type (e.g., bone fracture due to accident) by analyzing uploaded documents or based on user-provided input.
+
+Retrieve the required document checklist for the identified treatment from the knowledge base via the “Answer question with knowledge” action.
+
+Cross-validate the uploaded documents against the checklist.
+
+Notify the user about any missing documents required for insurance claim submission.
+
+Confirm if all required documents are successfully uploaded.</scope>
+</GenAiPlugin>

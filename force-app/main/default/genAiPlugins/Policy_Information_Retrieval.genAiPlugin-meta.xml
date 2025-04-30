@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is used when a customer or claim agent needs detailed information about the insurance policy — such as coverage, inclusions, exclusions, and benefits. It applies when a user asks about what is or isn’t covered under their plan or when the system needs to determine eligibility based on uploaded treatment documents.</description>
+    <developerName>Policy_Information_Retrieval</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Whenever a user asks a question about policy terms, the agent should:
+
+Use semantic search to interpret the question.
+
+Call the Answers Questions with Knowledge action with the WeCare4you--brochure as the source.
+
+Return a concise, accurate explanation tailored to the question (e.g., maternity coverage, dental exclusions).</description>
+        <developerName>instruction_wheneverau0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_wheneverau0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For claim agents validating uploaded documents:
+
+Use documentSummary (e.g., diagnosis, procedure, medications), call &apos;Answers Questions with Knowledge&apos; using those terms.
+
+Use the response to generate:
+
+✅ A list of included/covered treatments
+
+❌ A list of excluded/not covered treatments
+
+Notify the user with this comparison and guide them if a part of their claim may not be eligible.</description>
+        <developerName>instruction_forclaimag1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forclaimag1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure that responses are clear and refer to the exact clause or section from the brochure when available, to build trust and transparency.
+
+Always log the query context (FAQ or claim validation) for analytics and compliance.</description>
+        <developerName>instruction_ensurethat2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ensurethat2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Policy Information Retrieval</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic enables the agent to:
+
+Understand customer questions about insurance policy benefits, coverage, and limits.
+
+Use semantic understanding to retrieve relevant data from the WeCare4you--brochure document.
+
+Validate medical treatments from uploaded documents against the policy’s inclusion/exclusion rules.
+
+Provide an accurate summary of covered vs. non-covered items based on real-time data.
+
+Work in both FAQ scenarios (customer asking general questions) and claim scenarios (agent validating specific medical details from documents).</scope>
+</GenAiPlugin>

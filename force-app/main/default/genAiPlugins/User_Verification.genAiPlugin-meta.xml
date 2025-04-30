@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is triggered when a user initiates inquiry about claim request that requires access to their insurance or medical information, such as checking coverage, locating a network hospital, or raising a claim. The agent uses this topic to verify the user&apos;s identity before proceeding with any sensitive or personalized responses.</description>
+    <developerName>User_Verification</developerName>
+    <genAiFunctions>
+        <functionName>Get_Policy_Information</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>When the user asks a question related to claim or hospital location, store the user question as a context variable &apos;initial question&apos; where the agent should first check if the user is already verified in the current session.
+
+If not verified, the agent must prompt the user to enter their email address.
+
+Once the email is collected, the agent should call User Verification Flow Action.
+
+If the action returns a valid account, Greeting the user like &apos;Hello {AccountRecord Name}&apos; and then process the initial question that user asked looking at conversation.
+
+If the user is not found or email is invalid, inform the user and gracefully end or re-prompt.
+
+The verification process should be transparent but secure, ensuring minimal friction for users.</description>
+        <developerName>instruction_whentheuse0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whentheuse0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>User Verification</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic helps the agent verify the user&apos;s identity by:
+
+Collecting the user’s email address and policy number
+
+Invoking the User Verification Flow Action.
+
+Fetching associated Account-level insurance details from the system.
+
+Handling both valid and invalid user scenarios (e.g., no match found, multiple matches).
+
+Stopping or redirecting the flow in case of invalid or unverified users.</scope>
+</GenAiPlugin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>get the policy infromation based on user input</description>
+    <invocationTarget>Get_Policy_Information</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <mappingAttributes>
+        <label>AccounId</label>
+        <name>output_AccounId</name>
+        <parameterName>AccounId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <mappingAttributes>
+        <label>PolicyId</label>
+        <name>output_PolicyId</name>
+        <parameterName>PolicyId</parameterName>
+        <parameterType>output</parameterType>
+    </mappingAttributes>
+    <masterLabel>User Verification</masterLabel>
+    <progressIndicatorMessage>Getting Policy Records</progressIndicatorMessage>
+</GenAiFunction>

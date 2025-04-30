@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Dhinesh Kumar
+  @group             : 
+  @last modified on  : 04/30/2025
+  @last modified by  : Dhinesh Kumar
+-->
+<template>
+    <!--modal to upload file-->    
+        <lightning-card title="Upload Image">
+            <div class="slds-p-horizontal_medium">
+                <!--file upload to a record-->
+                <lightning-file-upload
+                    label="Upload File"
+                    name="fileUploader"
+                    record-id={recordId}
+                    onuploadfinished={handleUploadFinished}
+                    accepted-formats={acceptedFormats}
+                    multiple="true">
+                </lightning-file-upload>
+            </div>
+        </lightning-card>  
+</template>

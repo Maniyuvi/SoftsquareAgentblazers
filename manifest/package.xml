@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Communicate_Claimease_Agent_Flow</members>
+		<members>Create_Claim</members>
+		<members>FAQ_Agent</members>
+		<members>Get_Policy_Information</members>
+		<members>Retrieve_Image_Content_Flow</members>
+		<members>Route_to_Agent</members>
+		<members>Send_Slack_Message</members>
+		<members>Update_Claim</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Coverage_Include_Exclude</members>
+		<members>DocVerification</members>
+		<members>Retrieve_Image_Content</members>
+		<name>GenAiPromptTemplate</name>
+	</types>
+	<types>
+		<members></members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
+	<version>63.0</version>
+</Package>

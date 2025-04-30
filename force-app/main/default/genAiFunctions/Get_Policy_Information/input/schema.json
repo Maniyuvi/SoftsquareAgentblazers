@@ -1,0 +1,21 @@
+{
+  "required" : [ "PolicyHolderEmail", "PolicyNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "PolicyHolderEmail" : {
+      "title" : "PolicyHolderEmail",
+      "description" : "PolicyHolderEmail",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "PolicyNumber" : {
+      "title" : "PolicyNumber",
+      "description" : "policy hoder Number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

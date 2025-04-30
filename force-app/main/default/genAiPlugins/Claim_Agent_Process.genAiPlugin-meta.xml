@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is triggered when a user confirms that they have uploaded their claim documents. The InsureBuddy agent validates the claim record and initiates a backend review by another agent (ClaimEase) to check for completeness of the submitted documentation.</description>
+    <developerName>Claim_Agent_Process</developerName>
+    <genAiFunctions>
+        <functionName>Claimease_Agent_Action</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always check if the customer is verified before doing anything else. A customer is verified only if {!IsUserVerified} is true; if it’s false, the customer is not verified.
+Expect user to say something like:
+
+“I’ve uploaded the documents”
+
+“Done uploading”
+
+“Submitted the files” etc.
+Trigger backend agent action: &quot;ClaimEase Agent Action&quot;
+Input: {!$Context.claimId}.
+Action returns:
+
+Status: MissingDocs or CompleteDocs
+
+DocumentSummary: Status of MissingDocs/ CompleteDocs and document summary
+
+Handle Result:
+➤ If summary has MissingDocs:
+Respond with something like:
+
+“Thanks! Here’s what I found: ✅ Uploaded: Discharge Summary, Final Bill
+❌ Missing: Prescription, Cancelled Cheque”
+
+Send dynamic upload URL:
+
+
+&lt;a href=&quot;https://orgfarm-f58ecb683b.my.site.com/customer/s/claimdocs?recordId={claimRecord.Id}&quot; target=&quot;_blank&quot;&gt;Upload Missing Documents&lt;/a&gt;
+Ask user to notify after uploading.</description>
+        <developerName>instruction_alwayschec0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_alwayschec0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Claim Agent Process</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic allows InsureBuddy to:
+
+Pass the ClaimRecordId to ClaimEase.
+
+Retrieve and interpret response from ClaimEase:
+
+❌ Missing Documents → Re-instruct the user.
+
+✅ Complete → Proceed to validate coverage.
+
+Send appropriate upload link (again) for missing documents.
+
+once all documents are get uploaded proceed with claim coverage check
+
+Ensure readiness before final claim verification.</scope>
+</GenAiPlugin>

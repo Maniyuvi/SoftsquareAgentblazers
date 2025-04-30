@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is used when a verified user (policyholder or hospital partner) wants to initiate a health insurance claim request for reimbursement or cashless processing. It captures treatment details and submits the claim via backend action.</description>
+    <developerName>Claim_Request</developerName>
+    <genAiFunctions>
+        <functionName>Create_Claim</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Store the claim related question on variable &apos;claimQuestion&apos;.
+Before proceed, Always check if the customer is verified before doing anything else.A customer is verified only if {!IsUserVerified} is true; if it’s false, the customer is not verified.”
+
+When {!$Context.AccountId} is not null and {!IsUserVerified} is true proceed further.
+
+use claimQuestion to proceed to call &apos;Create Claim&apos; action or else Ask the user to provide a claim summary,
+
+Validate the inputs briefly (e.g., ensure treatment isn’t blank, dates are logical).
+
+Trigger the backend action Create Claim with:
+AccountId: {!$Context.accountId}
+Account Email : collected user email address
+insuranceId: {!$Context.policyId}
+ClaimSummary (collected from the user)
+
+After submission:
+
+Confirm successful creation.
+
+Provide a Claim Number (from response).
+
+After successful claim submission:
+Notify, 🎯 Claim Number from ClaimRecord variable
+
+🔗 A document upload URL in clickable HTML format like this:
+
+&lt;a href=&quot;https://orgfarm-f58ecb683b.my.site.com/customer/s/claimdocs?recordId={!$Context.claimId}&quot; target=&quot;_blank&quot;&gt;Upload Your Claim Documents&lt;/a&gt;
+Make sure to replace {!$Context.claimId} dynamically with the actual record ID from the claim creation response.
+
+🗣 Inform the user clearly:
+
+&quot;Please use the above link to upload all necessary documents and images for claim processing. Once done, kindly notify me so I can proceed with verification.&quot;
+
+➕ Then inform:
+
+&quot;Once you notify, our document analysis assistant ClaimEase will review the uploaded documents and help identify any missing or invalid ones for faster claim processing.&quot;</description>
+        <developerName>instruction_storethecl0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_storethecl0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Claim Request</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Run this topic by Always check if the customer is verified before doing anything else.A customer is verified only if {!IsUserVerified} is true; if it’s false, the customer is not verified.”
+
+This topic allows the agent to:
+
+Collect the user’s identity and verify policy status.
+
+Gather the treatment summary needed to initiate a claim.
+
+Submit the claim request by calling the Create Claim action using the provided treatment info and backend policy/account context.
+
+Support both end-user claims and hospital-initiated pre-intimation claims (for cashless flow).</scope>
+</GenAiPlugin>

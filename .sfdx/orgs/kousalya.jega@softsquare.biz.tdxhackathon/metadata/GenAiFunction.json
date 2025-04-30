@@ -1,0 +1,57 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-30T10:44:17.000Z",
+      "fileName": "genAiFunctions/Update_Claim_Action.genAiFunction",
+      "fullName": "Update_Claim_Action",
+      "id": "172NS00000DfPB6YAN",
+      "lastModifiedById": "005NS00000KmkhlYAB",
+      "lastModifiedByName": "Kousalya J",
+      "lastModifiedDate": "2025-04-30T10:44:17.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiFunction"
+    },
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-30T04:48:06.000Z",
+      "fileName": "genAiFunctions/Get_Policy_Information.genAiFunction",
+      "fullName": "Get_Policy_Information",
+      "id": "172NS00000DdoQTYAZ",
+      "lastModifiedById": "005NS00000KmkhlYAB",
+      "lastModifiedByName": "Kousalya J",
+      "lastModifiedDate": "2025-04-30T05:01:03.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiFunction"
+    },
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-30T05:09:15.000Z",
+      "fileName": "genAiFunctions/Claimease_Agent_Action.genAiFunction",
+      "fullName": "Claimease_Agent_Action",
+      "id": "172NS00000DdepKYAR",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T08:19:49.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiFunction"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-29T21:44:46.000Z",
+      "fileName": "genAiFunctions/Create_Claim.genAiFunction",
+      "fullName": "Create_Claim",
+      "id": "172NS00000Dcbn3YAB",
+      "lastModifiedById": "005NS00000KmkhlYAB",
+      "lastModifiedByName": "Kousalya J",
+      "lastModifiedDate": "2025-04-30T05:54:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiFunction"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Y3wle91DSC5t69+eIZ5WokE/bxpPRfKZhUdekp2lFK8=_1</activeVersionIdentifier>
+    <description>Retrieve Image Contents from the Content Document</description>
+    <developerName>Retrieve_Image_Content</developerName>
+    <masterLabel>Retrieve Image Content</masterLabel>
+    <templateVersions>
+        <content>You are an intelligent assistant that extracts and interprets all visible and meaningful information from image-based documents.
+
+Inputs:
+FileDocuments: One or more image files of various document types such as ID cards, Aadhaar cards, passports, licenses, insurance forms, certificates, etc.
+
+Your Task:
+1. Extract the file name of each document.
+2. Perform OCR to extract all visible text, both labeled and unlabeled, from the document.
+3. Extract all important fields, including:
+ - Clearly labeled fields (such as Name, Date of Birth, Gender, Address, Aadhaar Number, License Number, Passport Number, Issue Date, Expiry Date, etc.)
+ - Document-level information (such as Document Type, Country, State, Authority, Enrollment Number, Reference Numbers, Signatures, or Official Logos)
+ - Instructional or informational text (such as important notes, warnings, usage instructions, validity notices, authentication instructions, etc.)
+4. For any important text that does not have an explicit label:
+ - Assign a **best-guess descriptive label** based on its context and content (e.g., &quot;EnrollmentNumber&quot;, &quot;ValidityInformation&quot;, &quot;AuthenticationInstructions&quot;, &quot;DocumentInformation&quot;, etc.)
+
+Output Format:
+Return a clean raw JSON array only. No extra text, no wrapping, no explanations.
+
+Each JSON object must follow this structure:
+
+{
+ &quot;DocumentName&quot;: &quot;FileName.jpg&quot;,
+ &quot;Details&quot;: {
+ &quot;Field1&quot;: &quot;Value1&quot;,
+ &quot;Field2&quot;: &quot;Value2&quot;,
+ ...
+ }
+}
+
+Notes:
+- Include all meaningful English text that provides important information, even if it&apos;s not connected to a direct label.
+- Detect and label useful standalone text intelligently.
+- Ignore language you cannot detect properly (example: Hindi if not translated).
+- Avoid empty, missing, or irrelevant fields.
+- Do not include generic keys like &quot;OtherText&quot; or &quot;Miscellaneous.&quot;
+- Output must be clean JSON only, without any additional text or formatting like json &apos;&apos;&apos;.
+</content>
+        <inputs>
+            <apiName>File</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>File</masterLabel>
+            <referenceName>Input:File</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>Y3wle91DSC5t69+eIZ5WokE/bxpPRfKZhUdekp2lFK8=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

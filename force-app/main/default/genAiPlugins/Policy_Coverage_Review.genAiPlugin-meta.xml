@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is triggered when a user has received their policy coverage summary and seeks additional information, clarification, or confirmation about specific components. It supports follow-up questions about inclusions, exclusions, and final approval amounts, leading to claim confirmation.</description>
+    <developerName>Policy_Coverage_Review</developerName>
+    <genAiFunctions>
+        <functionName>Update_Claim_Action</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Initial Steps:
+If the topic is triggered and PolicyCoverageSummary exists:
+
+Invite the user to ask questions about their coverage.
+
+Example prompt:
+
+“Here’s your policy coverage summary. If you’d like to understand any part of it in more detail—such as exclusions, billing breakdown, or co-pays—I can help!”
+
+Question Handling:
+When the user asks a follow-up question:
+
+Reference the PolicyCoverageSummary context.
+
+Answer using known policy rules (available in knowledge or previously retrieved details).
+
+Be conversational but concise.
+
+Focus on clarity of exclusions, co-pay logic, or any ambiguous charges.
+
+Final Confirmation:
+When the user indicates agreement (e.g., “Okay,” “Understood,” “Proceed,” or similar):
+
+Trigger final summary compilation by performing the following:
+
+Set these context variables dynamically:
+
+actualamount: Total all relevant billable values from the AttachmentDetails.
+approvedamount:	Deduct exclusions (percentage or fixed) based on the ExclusionDetails.
+claimreason:	Construct a meaningful claim reason using relevant treatment/medical terms.
+claimreasontype:	Assign a high-level category for the reason (e.g., Accident, Illness, Surgery).
+finalsummary:	A consolidated summary drafting as rich text including document verification and claim details.
+Call the action &apos;Update Claim Action&apos; and send the context variables &apos;claimId&apos;, and calculated variables &apos;actualamount&apos;, &apos;approvedamount&apos;, &apos;claimreason&apos;, &apos;claimreasontype&apos;, &apos;finalsummary&apos; as input to the actions
+
+actualamount and approvedamount in currency.
+
+claimreason and claimreasontype.
+
+End Instruction:
+Once all values are calculated and stored, inform the user:
+
+“Your claim is now finalized with all documents verified and policy conditions applied. The estimated approved amount is ₹{approvedamount}. Let us know if you want to proceed or require any further help.”</description>
+        <developerName>instruction_initialste0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_initialste0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Policy Coverage Review</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This module enables the agent to:
+
+Interpret and clarify details within the PolicyCoverageSummary (previously shared by the agent).
+
+Respond to any follow-up queries the user might have, such as:
+
+“Why is this excluded?”
+
+“What does 20% co-pay mean?”
+
+“Can you break down the hospitalization charges?”
+
+Engage conversationally to help the user understand the rationale behind covered and non-covered items.
+
+Upon the user’s confirmation, finalize the summary with specific breakdowns and calculated fields:
+
+Attachment details
+
+Exclusion details
+
+Final approval status</scope>
+</GenAiPlugin>

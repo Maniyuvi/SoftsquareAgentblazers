@@ -1,0 +1,96 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T04:00:02.000Z",
+      "fileName": "genAiPlugins/Policy_Information_Retrieval.genAiPlugin",
+      "fullName": "Policy_Information_Retrieval",
+      "id": "179NS000001cmmDYAQ",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T05:09:41.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T09:42:27.000Z",
+      "fileName": "genAiPlugins/Policy_Coverage_Review.genAiPlugin",
+      "fullName": "Policy_Coverage_Review",
+      "id": "179NS000001d0FhYAI",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T11:40:34.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T04:26:02.000Z",
+      "fileName": "genAiPlugins/Claim_Request.genAiPlugin",
+      "fullName": "Claim_Request",
+      "id": "179NS000001cnaDYAQ",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T10:54:52.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T04:08:40.000Z",
+      "fileName": "genAiPlugins/Hospital_Locator.genAiPlugin",
+      "fullName": "Hospital_Locator",
+      "id": "179NS000001cn0jYAA",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T10:46:24.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T03:40:38.000Z",
+      "fileName": "genAiPlugins/User_Verification.genAiPlugin",
+      "fullName": "User_Verification",
+      "id": "179NS000001cmO1YAI",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T08:03:38.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000KmkhlYAB",
+      "createdByName": "Kousalya J",
+      "createdDate": "2025-04-29T13:14:20.000Z",
+      "fileName": "genAiPlugins/Claim_Document_Validation.genAiPlugin",
+      "fullName": "Claim_Document_Validation",
+      "id": "179NS000001cKbSYAU",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T11:23:03.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    },
+    {
+      "createdById": "005NS00000K9pyLYAR",
+      "createdByName": "OrgFarm EPIC",
+      "createdDate": "2025-04-30T04:56:19.000Z",
+      "fileName": "genAiPlugins/Claim_Agent_Process.genAiPlugin",
+      "fullName": "Claim_Agent_Process",
+      "id": "179NS000001cosrYAA",
+      "lastModifiedById": "005NS00000K9pyLYAR",
+      "lastModifiedByName": "OrgFarm EPIC",
+      "lastModifiedDate": "2025-04-30T11:56:16.000Z",
+      "manageableState": "unmanaged",
+      "type": "GenAiPlugin"
+    }
+  ]
+}
